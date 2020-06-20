@@ -11,8 +11,7 @@ fn main() {
     part2(w.clone());
 }
 
-fn part1(w: World) {
-    let mut w = w;
+fn part1(mut w: World) {
     loop {
         if let Some(crash_loc) = w.tick(false) {
             println!("{:?}", crash_loc);
@@ -21,8 +20,7 @@ fn part1(w: World) {
     }
 }
 
-fn part2(w: World) {
-    let mut w = w;
+fn part2(mut w: World) {
     loop {
         if let Some(final_loc) = w.tick(true) {
             println!("{:?}", final_loc);
